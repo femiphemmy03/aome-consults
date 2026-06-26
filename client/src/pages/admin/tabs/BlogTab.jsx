@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../../utils/api.js';
+import ImageUploadField from '../../../components/ImageUploadField.jsx';
 
 const emptyForm = { title: '', excerpt: '', content: '', coverImageUrl: '', ctaText: 'Read More', ctaUrl: '', published: false };
 
@@ -78,8 +79,11 @@ export default function BlogTab() {
         <div className="grid gap-3">
           <input required placeholder="Title" className="input-field" value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })} />
-          <input placeholder="Cover image URL" className="input-field" value={form.coverImageUrl}
-            onChange={(e) => setForm({ ...form, coverImageUrl: e.target.value })} />
+          <ImageUploadField
+            label="Cover image"
+            value={form.coverImageUrl}
+            onChange={(url) => setForm({ ...form, coverImageUrl: url })}
+          />
           <textarea placeholder="Excerpt (shown on the Journal page)" rows={2} className="input-field" value={form.excerpt}
             onChange={(e) => setForm({ ...form, excerpt: e.target.value })} />
           <textarea required placeholder="Full post content" rows={8} className="input-field" value={form.content}

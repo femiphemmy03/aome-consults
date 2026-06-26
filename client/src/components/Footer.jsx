@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-5 py-14 grid gap-8 md:grid-cols-3">
         <div>
           <img src={logo} alt="Aome Consults logo" className="h-10 rounded-md mb-3" />
-          <p className="font-display italic text-gold-300">Leading Without Losing Yourself</p>
+          <p className="font-display italic text-gold-300">Healing Minds. Strengthening Relationships. Transforming Lives.</p>
         </div>
 
         <div className="flex flex-col gap-2 text-sm">

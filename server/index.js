@@ -11,6 +11,7 @@ import blogRoutes from './routes/blog.js';
 import bookRoutes from './routes/books.js';
 import surveyRoutes from './routes/survey.js';
 import settingsRoutes from './routes/settings.js';
+import uploadRoutes from './routes/uploads.js';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler.js';
 
 dotenv.config();
@@ -51,6 +52,7 @@ app.use('/api/blog', blogRoutes);
 app.use('/api/books', bookRoutes);
 app.use('/api/survey', surveyRoutes);
 app.use('/api/settings', settingsRoutes);
+app.use('/api/uploads', uploadRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);

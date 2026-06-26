@@ -39,6 +39,17 @@ export default function BookingsTab() {
     }
   }
 
+  async function handleComplete(id) {
+    if (!confirm('Mark this session as completed? This will email the client a survey link.')) return;
+    setError('');
+    try {
+      await api.patch(`/api/bookings/admin/${id}/complete`);
+      load();
+    } catch (err) {
+      setError(err.response?.data?.error || 'Could not mark session complete');
+    }
+  }
+
   const statusColor = {
     pending: 'bg-yellow-100 text-yellow-700',
     paid: 'bg-green-100 text-green-700',
@@ -111,9 +122,21 @@ export default function BookingsTab() {
                 </div>
               </div>
             ) : (
-              <button onClick={() => startEdit(b)} className="btn-ghost btn-small">
-                {b.schedule_status === 'confirmed' ? 'Edit Schedule' : 'Confirm Schedule'}
-              </button>
+              <div className="flex gap-2">
+                <button onClick={() => startEdit(b)} className="btn-ghost btn-small">
+                  {b.schedule_status === 'confirmed' ? 'Edit Schedule' : 'Confirm Schedule'}
+                </button>
+                {b.schedule_status === 'confirmed' && !b.session_completed && (
+                  <button onClick={() => handleComplete(b.id)} className="btn-primary btn-small">
+                    Mark Session Completed
+                  </button>
+                )}
+                {b.session_completed && (
+                  <span className="text-xs font-bold px-3 py-2 rounded-full bg-teal-100 text-teal-700">
+                    Survey sent ✓
+                  </span>
+                )}
+              </div>
             )}
           </div>
         ))}

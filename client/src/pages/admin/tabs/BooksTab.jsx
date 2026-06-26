@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../../utils/api.js';
+import ImageUploadField from '../../../components/ImageUploadField.jsx';
 
 const emptyForm = {
   title: '', coverImageUrl: '', shortDescription: '', selarUrl: '',
@@ -89,8 +90,11 @@ export default function BooksTab() {
         <div className="grid gap-3">
           <input required placeholder="Title" className="input-field" value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })} />
-          <input placeholder="Cover image URL (e.g. /books/cover.png)" className="input-field" value={form.coverImageUrl}
-            onChange={(e) => setForm({ ...form, coverImageUrl: e.target.value })} />
+          <ImageUploadField
+            label="Cover image"
+            value={form.coverImageUrl}
+            onChange={(url) => setForm({ ...form, coverImageUrl: url })}
+          />
           <textarea placeholder="Short description" rows={3} className="input-field" value={form.shortDescription}
             onChange={(e) => setForm({ ...form, shortDescription: e.target.value })} />
           <input required placeholder="Selar URL" className="input-field" value={form.selarUrl}

@@ -174,10 +174,13 @@ export default function Book() {
       )}
 
       {step === 1 && (
-        <form onSubmit={handleOtpSubmit} className="grid gap-4">
-          <p className="text-sm text-ink-600">
-            We've sent a 6-digit code to <strong>{lead.email}</strong>. Enter it below to verify your email.
-          </p>
+       <form onSubmit={handleOtpSubmit} className="grid gap-4">
+  <p className="text-sm text-ink-600">
+    We've sent a 6-digit code to <strong>{lead.email}</strong>. Enter it below to verify your email.
+  </p>
+  <p className="text-sm text-red-500 font-medium">
+    ⚠️ If you don’t see the code in your inbox, please check your junk or spam folder.
+  </p>
           <input
             required
             maxLength={6}

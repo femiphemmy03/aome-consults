@@ -5,7 +5,8 @@ import {
   clientBookingConfirmation,
   counsellorBookingNotification,
   scheduleRequestNotification,
-  sessionConfirmedEmail
+  sessionConfirmedEmail,
+  postSessionSurveyEmail
 } from '../services/emailTemplates.js';
 
 function shortRef(id) {
@@ -110,7 +111,7 @@ export async function verifyBookingPayment(req, res, next) {
     if (updateError) throw updateError;
 
     const bookingRef = shortRef(updated.id);
-    const frontendUrl = (process.env.FRONTEND_URLS || '').split(',')[0];
+    const frontendUrl = process.env.PUBLIC_APP_URL;
     const scheduleUrl = `${frontendUrl}/schedule?ref=${updated.id}`;
 
     await sendEmail({
@@ -190,7 +191,7 @@ export async function requestSchedule(req, res, next) {
 
     const counsellorEmail = process.env.COUNSELLOR_EMAIL;
     const vaEmail = process.env.VA_EMAIL;
-    const frontendUrl = (process.env.FRONTEND_URLS || '').split(',')[0];
+    const frontendUrl = process.env.PUBLIC_APP_URL;
 
     const html = scheduleRequestNotification({
       fullName: updated.full_name,
@@ -210,6 +211,42 @@ export async function requestSchedule(req, res, next) {
           )
         )
     );
+
+    res.json({ booking: updated });
+  } catch (err) {
+    next(err);
+  }
+}
+
+/**
+ * Admin marks the session as actually having happened (they're the only
+ * ones who know, since video calls are manual Google Meet links, not an
+ * API). This is what triggers the post-session survey email.
+ */
+export async function completeBooking(req, res, next) {
+  try {
+    const { id } = req.params;
+
+    const { data: updated, error } = await supabase
+      .from('bookings')
+      .update({ session_completed: true })
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error || !updated) return res.status(404).json({ error: 'Booking not found' });
+
+    const frontendUrl = process.env.PUBLIC_APP_URL;
+    const surveyUrl = `${frontendUrl}/survey/${updated.id}`;
+
+    await sendEmail({
+      to: updated.email,
+      subject: 'How was your session? — Aome Consults',
+      html: postSessionSurveyEmail({
+        fullName: updated.full_name,
+        surveyUrl
+      })
+    }).catch((e) => console.error('[completeBooking] survey email failed:', e.message));
 
     res.json({ booking: updated });
   } catch (err) {
@@ -255,6 +292,12 @@ export async function confirmBookingAdmin(req, res, next) {
 
     if (error || !updated) return res.status(404).json({ error: 'Booking not found' });
 
+    const { data: settingRow } = await supabase
+      .from('site_settings')
+      .select('value')
+      .eq('key', 'whatsapp_number')
+      .maybeSingle();
+
     await sendEmail({
       to: updated.email,
       subject: 'Your session is confirmed — Aome Consults',
@@ -262,7 +305,8 @@ export async function confirmBookingAdmin(req, res, next) {
         fullName: updated.full_name,
         scheduledDate: updated.preferred_date,
         scheduledTime: updated.preferred_time,
-        videoCallLink: updated.video_call_link
+        videoCallLink: updated.video_call_link,
+        whatsappNumber: settingRow?.value
       })
     }).catch((e) => console.error('[confirmBookingAdmin] client email failed:', e.message));
 

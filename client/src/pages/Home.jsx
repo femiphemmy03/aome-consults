@@ -84,9 +84,9 @@ export default function Home() {
           <div>
             <p className="eyebrow eyebrow-gold">Aome Consults &middot; Reflections with Maria</p>
             <h1 className="font-display text-4xl md:text-6xl leading-tight mb-5">
-              Leading Without
+              Healing Minds. Strengthening Relationships. 
               <br />
-              <em className="italic text-gold-600">Losing Yourself</em>
+              <em className="italic text-gold-600">Transforming Lives.</em>
             </h1>
             <p className="font-display text-lg text-teal-700 mb-5 min-h-[1.8em]">
               Barr. Dr. Maria Esele Abraham is a <RotatingRole />
@@ -101,7 +101,7 @@ export default function Home() {
               <Link to="/services" className="btn-ghost">Explore Our Services</Link>
             </div>
             <p className="text-xs text-ink-400">
-              Founder, Aome Consults &amp; Reflections with Maria &middot; CAC Reg. No. 9031236
+              Founder, Aome Consults &amp; Aome Foundation &middot;
             </p>
           </div>
 

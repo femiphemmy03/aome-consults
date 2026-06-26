@@ -22,7 +22,7 @@ function wrapper(bodyHtml, { heading = 'Aome Consults' } = {}) {
       </div>
       <div style="padding:20px 28px 28px;border-top:1px solid #f0e9d8;margin-top:16px;font-size:12px;color:#7c8a85;">
         <p style="margin:0 0 4px;">Aome Consults Limited &middot; CAC Reg. No. 9031236</p>
-        <p style="margin:0;">aomeconsults.com &middot; aomeconsults@gmail.com</p>
+        <p style="margin:0;">aomeconsults.com &middot; aomeconsults.contacts@gmail.com</p>
       </div>
     </div>
   </div>`;
@@ -95,13 +95,18 @@ export function scheduleRequestNotification({ fullName, email, preferredDate, pr
   );
 }
 
-export function sessionConfirmedEmail({ fullName, scheduledDate, scheduledTime, videoCallLink }) {
+export function sessionConfirmedEmail({ fullName, scheduledDate, scheduledTime, videoCallLink, whatsappNumber }) {
   return wrapper(
     `<p>Hi ${fullName},</p>
      <p>Your session with Barr. Dr. Maria Esele Abraham is confirmed for:</p>
      <p style="font-size:18px;font-weight:bold;color:${TEAL};">${scheduledDate} at ${scheduledTime}</p>
      ${button('Join Video Call', videoCallLink)}
-     <p style="margin-top:20px;">Please join a few minutes early. We look forward to speaking with you.</p>`,
+     <p style="margin-top:20px;">Please join a few minutes early. We look forward to speaking with you.</p>
+     ${
+       whatsappNumber
+         ? `<p style="margin-top:20px;font-size:13px;color:#51605B;">If this time doesn't work for you, please reach out to us on WhatsApp at <a href="https://wa.me/${whatsappNumber.replace(/[^\d]/g, '')}" style="color:${TEAL};font-weight:bold;">${whatsappNumber}</a> and we'll help you find a better time.</p>`
+         : ''
+     }`,
     { heading: 'Your Session is Confirmed' }
   );
 }

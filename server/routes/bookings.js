@@ -5,7 +5,8 @@ import {
   getBooking,
   requestSchedule,
   listBookingsAdmin,
-  confirmBookingAdmin
+  confirmBookingAdmin,
+  completeBooking
 } from '../controllers/bookingController.js';
 import { requireAdminAuth } from '../middleware/auth.js';
 import { generalRateLimiter } from '../middleware/rateLimiter.js';
@@ -21,5 +22,6 @@ router.post('/:id/schedule', requestSchedule);
 // Admin
 router.get('/admin/all', requireAdminAuth, listBookingsAdmin);
 router.patch('/admin/:id/confirm', requireAdminAuth, confirmBookingAdmin);
+router.patch('/admin/:id/complete', requireAdminAuth, completeBooking);
 
 export default router;
