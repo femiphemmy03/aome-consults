@@ -1,2 +1,15 @@
+# Aome Consults — robots.txt
+# Allow all legitimate crawlers full access to the public site.
+
 User-agent: *
 Allow: /
+
+# Admin dashboard — not for search engines
+Disallow: /admin
+
+# Transactional/functional pages — not content, no value in indexing
+Disallow: /book
+Disallow: /schedule
+Disallow: /survey
+
+Sitemap: https://aomeconsults.com/sitemap.xml

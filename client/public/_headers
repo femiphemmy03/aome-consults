@@ -1,0 +1,29 @@
+# ============================================================
+# AOME CONSULTS — NETLIFY HEADERS
+# CSP is in REPORT-ONLY mode: nothing is blocked yet, but every
+# violation gets logged in the browser console so we can see exactly
+# which domains the live site actually needs before we enforce it.
+#
+# HOW TO USE THIS:
+# 1. Deploy this file as-is.
+# 2. Open the live site in a browser, open DevTools → Console.
+# 3. Click through every page AND complete a full test booking
+#    (this is the only way to trigger the Flutterwave checkout script).
+# 4. Any blocked resource logs a line like:
+#      "Refused to load ... because it violates the following
+#       Content Security Policy directive ..."
+# 5. Send me that list — we'll add anything missing, then switch
+#    Content-Security-Policy-Report-Only to plain Content-Security-Policy
+#    to actually enforce it.
+#
+# REMEMBER TO UPDATE before going live:
+#   - backend URL is already set to: https://aome-consults.onrender.com
+#   - replace https://*.supabase.co if your project ref ever changes
+# ============================================================
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy-Report-Only: default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.flutterwave.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.supabase.co https://checkout.flutterwave.com; connect-src 'self' https://aome-consults.onrender.com https://*.supabase.co https://api.flutterwave.com; frame-src https://checkout.flutterwave.com; base-uri 'self'; form-action 'self'; object-src 'none'

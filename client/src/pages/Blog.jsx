@@ -2,10 +2,18 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../utils/api.js';
 import { Reveal } from '../hooks/useScrollAnimations.jsx';
+import useMeta from '../hooks/useMeta.js';
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useMeta({
+    title: 'Journal',
+    description:
+      'Reflections with Maria — articles on grief, relationships, mental health, and personal transformation from Barr. Dr. Maria Esele Abraham.',
+    path: '/blog'
+  });
 
   useEffect(() => {
     api

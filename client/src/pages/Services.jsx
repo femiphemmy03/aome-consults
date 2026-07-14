@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import LeafIcon from '../components/LeafIcon.jsx';
 import { Reveal } from '../hooks/useScrollAnimations.jsx';
+import useMeta from '../hooks/useMeta.js';
 
 const pillars = [
   {
@@ -63,6 +64,13 @@ const schemaBenefits = [
 ];
 
 export default function Services() {
+  useMeta({
+    title: 'Services',
+    description:
+      'Therapy & counselling, coaching, Schema Intelligence™, training & consulting, and speaking — explore the five pillars of support at Aome Consults.',
+    path: '/services'
+  });
+
   return (
     <main>
       <section className="px-5 pt-14 pb-10 text-center max-w-3xl mx-auto">

@@ -13,6 +13,7 @@ import BlogPost from './pages/BlogPost.jsx';
 import Book from './pages/Book.jsx';
 import Schedule from './pages/Schedule.jsx';
 import Survey from './pages/Survey.jsx';
+import Privacy from './pages/Privacy.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 import AdminApp from './pages/admin/AdminApp.jsx';
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/book" element={<Book />} />
+        <Route path="/privacy" element={<Privacy />} />
         {/* /schedule is intentionally unlisted — never linked from nav or buttons,
             only reachable via the link emailed after payment. */}
         <Route path="/schedule" element={<Schedule />} />

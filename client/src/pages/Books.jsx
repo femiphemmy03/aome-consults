@@ -2,12 +2,20 @@ import { useEffect, useState } from 'react';
 import api from '../utils/api.js';
 import { useSettings } from '../context/SettingsContext.jsx';
 import { Reveal } from '../hooks/useScrollAnimations.jsx';
+import useMeta from '../hooks/useMeta.js';
 
 export default function Books() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { settings } = useSettings();
+
+  useMeta({
+    title: 'Books',
+    description:
+      "Explore Dr. Maria Esele Abraham's published works, including The Inner Map — books on personality, beliefs, and the psychology of meaning.",
+    path: '/books'
+  });
 
   useEffect(() => {
     api

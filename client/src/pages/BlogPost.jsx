@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import api from '../utils/api.js';
+import useMeta from '../hooks/useMeta.js';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -16,6 +17,17 @@ export default function BlogPost() {
       })
       .catch(() => setStatus('error'));
   }, [slug]);
+
+  // Hooks must run unconditionally — falls back to generic values while
+  // loading, then becomes the real post title/excerpt once it arrives.
+  // This is what actually shows up in Google results and browser tabs
+  // for this specific post, rather than a generic site-wide title.
+  useMeta({
+    title: post?.title || 'Journal',
+    description: post?.excerpt || undefined,
+    path: `/blog/${slug}`,
+    noindex: status === 'error'
+  });
 
   if (status === 'loading') {
     return <p className="text-center py-20 text-ink-400">Loading...</p>;
