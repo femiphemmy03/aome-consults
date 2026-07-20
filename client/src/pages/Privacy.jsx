@@ -30,7 +30,7 @@ export default function Privacy() {
 
       <div className="bg-teal-700 text-cream-100 rounded-brand px-7 py-5 mb-10 text-sm leading-relaxed">
         <p>
-          At Aome Consults, your privacy is not just a legal obligation — it is a
+          At Aome Consults, your privacy is not just a legal obligation - it is a
           reflection of the trust you place in us when you seek support. This policy
           explains clearly what information we collect, why we collect it, and how it
           is protected.
@@ -50,24 +50,24 @@ export default function Privacy() {
         <p>We collect only what is necessary to provide our services to you:</p>
         <ul className="list-disc pl-5 space-y-2">
           <li>
-            <strong>Contact information</strong> — your name, email address and phone number,
+            <strong>Contact information</strong> - your name, email address and phone number,
             provided when you complete a booking or inquiry form.
           </li>
           <li>
-            <strong>Session information</strong> — a brief description of what you would like
+            <strong>Session information</strong> - a brief description of what you would like
             to discuss, provided voluntarily before your consultation.
           </li>
           <li>
-            <strong>Payment information</strong> — processed securely through Flutterwave.
+            <strong>Payment information</strong> - processed securely through Flutterwave.
             We do not store your card details. Flutterwave's own privacy policy governs
             their handling of payment data.
           </li>
           <li>
-            <strong>Communication records</strong> — emails sent between you and Aome Consults
+            <strong>Communication records</strong> - emails sent between you and Aome Consults
             for the purpose of scheduling and follow-up.
           </li>
           <li>
-            <strong>Feedback</strong> — ratings and written feedback submitted through our
+            <strong>Feedback</strong> - ratings and written feedback submitted through our
             post-session survey, provided voluntarily.
           </li>
         </ul>
@@ -118,7 +118,7 @@ export default function Privacy() {
 
       <Section title="6. Email Communications">
         <p>
-          We send transactional emails only — booking confirmations, OTP verification
+          We send transactional emails only - booking confirmations, OTP verification
           codes, scheduling links, session confirmations and post-session surveys.
           These are sent via Resend and are directly related to services you have
           requested. We do not send unsolicited marketing emails.
@@ -128,11 +128,11 @@ export default function Privacy() {
       <Section title="7. Third-Party Services">
         <p>Our website uses the following third-party services:</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Flutterwave</strong> — payment processing</li>
-          <li><strong>Supabase</strong> — secure data storage</li>
-          <li><strong>Resend</strong> — transactional email delivery</li>
-          <li><strong>Google Fonts</strong> — typography (no personal data shared)</li>
-          <li><strong>WhatsApp</strong> — optional direct chat via click-to-chat link</li>
+          <li><strong>Flutterwave</strong> - payment processing</li>
+          <li><strong>Supabase</strong> - secure data storage</li>
+          <li><strong>Resend</strong> - transactional email delivery</li>
+          <li><strong>Google Fonts</strong> - typography (no personal data shared)</li>
+          <li><strong>WhatsApp</strong> - optional direct chat via click-to-chat link</li>
         </ul>
         <p>
           Each third party operates under its own privacy policy. We recommend reviewing

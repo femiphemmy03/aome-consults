@@ -102,7 +102,7 @@ export default function Schedule() {
           </div>
         ) : (
           <p className="text-ink-600">
-            Thank you — we've noted your preferred time and will confirm availability by email
+            Thank you - we've noted your preferred time and will confirm availability by email
             shortly, along with your video call link.
           </p>
         )}

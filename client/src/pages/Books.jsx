@@ -13,7 +13,7 @@ export default function Books() {
   useMeta({
     title: 'Books',
     description:
-      "Explore Dr. Maria Esele Abraham's published works, including The Inner Map — books on personality, beliefs, and the psychology of meaning.",
+      "Explore Dr. Maria Esele Abraham's published works, including The Inner Map - books on personality, beliefs, and the psychology of meaning.",
     path: '/books'
   });
 

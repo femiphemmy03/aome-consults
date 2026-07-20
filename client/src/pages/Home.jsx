@@ -41,46 +41,48 @@ function RotatingRole() {
 
 // Pain points that speak directly to the visitor's felt experience
 const painPoints = [
-  { icon: '💔', text: 'Struggling with grief, loss or emotional pain that won\'t go away' },
-  { icon: '🔄', text: 'Repeating the same patterns in relationships without knowing why' },
+  { icon: '🤝', text: 'Facing challenges in marriage, family or workplace relationships' },
+   { icon: '🔄', text: 'Repeating the same patterns in relationships without knowing why' },
   { icon: '🌫️', text: 'Feeling stuck, overwhelmed or disconnected from who you truly are' },
-  { icon: '🤝', text: 'Facing challenges in marriage, family or workplace relationships' }
-];
+   { icon: '💔', text: 'Struggling with grief, loss or emotional pain that won\'t go away' }
+
+  ];
 
 // What the client walks away with — solution focused
 const outcomes = [
   {
     title: 'Clarity & Self-Understanding',
-    text: 'You will finally understand the hidden beliefs and emotional patterns driving your thoughts, feelings and decisions — not just what you do, but why.'
-  },
-  {
-    title: 'Healing from Pain',
-    text: 'Whether it\'s grief, trauma, loss or old wounds — you will have a safe, compassionate space to process, heal and move forward at your own pace.'
+    text: 'You will finally understand the hidden beliefs and emotional patterns driving your thoughts, feelings and decisions - not just what you do, but why.'
   },
   {
     title: 'Healthier Relationships',
-    text: 'You will gain the insight and tools to show up differently in your relationships — with more confidence, boundaries and genuine connection.'
+    text: 'You will gain the insight and tools to show up differently in your relationships - with more confidence, boundaries and genuine connection.'
   },
   {
+    title: 'Healing from Pain',
+    text: 'Whether it\'s grief, trauma, loss or old wounds - you will have a safe, compassionate space to process, heal and move forward at your own pace.'
+  },
+  
+  {
     title: 'Lasting Transformation',
-    text: 'Not just temporary relief — you will leave with practical, evidence-based strategies that create real, sustainable change in how you live and relate.'
+    text: 'Not just temporary relief - you will leave with practical, evidence-based strategies that create real, sustainable change in how you live and relate.'
   }
 ];
 
 const testimonials = [
   {
-    quote: 'I was broken and guarded when I began my Love Readiness journey — I expected judgment, not understanding. From the very first conversation, Maria welcomed me with compassion and patience. Our sessions became a place of healing, clarity and hope. I didn\'t just learn — I rediscovered parts of myself I thought I had lost. This isn\'t just a job for her. It is a ministry.',
+    quote: 'I was broken and guarded when I began my Love Readiness journey - I expected judgment, not understanding. From the very first conversation, Maria welcomed me with compassion and patience. Our sessions became a place of healing, clarity and hope. I didn\'t just learn - I rediscovered parts of myself I thought I had lost. This isn\'t just a job for her. It is a ministry.',
     name: 'Progress Ekwuazi',
     service: 'LoveReadiness Coaching'
   },
   {
-    quote: 'Whenever Maria teaches, I start asking myself — what is the inner map behind this behaviour? I no longer judge people so quickly because I now understand that behaviour usually has a story.',
-    name: 'Anonymous',
+    quote: 'Whenever Maria teaches, I start asking myself - what is the inner map behind this behaviour? I no longer judge people so quickly because I now understand that behaviour usually has a story.',
+    name: 'A. Adedayo',
     service: 'Schema Intelligence'
   },
   {
     quote: 'I stopped asking "What is wrong with me?" and started asking "What shaped me?" That single shift changed everything.',
-    name: 'Anonymous',
+    name: 'J. Ezimah',
     service: 'Schema Intelligence'
   }
 ];
@@ -90,22 +92,22 @@ const services = [
   {
     title: 'A Space to Heal',
     sub: 'Therapy & Counselling',
-    text: 'Individual therapy, grief support, trauma recovery, anxiety and depression support, marriage and family counselling — all in a safe, confidential setting.'
+    text: 'Individual therapy, marriage and family counselling, trauma recovery, anxiety and depression support, grief support - all in a safe and confidential setting.'
   },
   {
     title: 'A Path Forward',
     sub: 'Coaching & Personal Development',
-    text: 'Life coaching, relationship coaching, emotional intelligence, purpose discovery and women\'s empowerment — practical support for intentional growth.'
+    text: 'Life coaching, relationship coaching, emotional intelligence, purpose discovery and women\'s empowerment - practical support for intentional growth.'
   },
   {
     title: 'A Map of Yourself',
     sub: 'Schema Intelligence™',
-    text: 'Dr. Maria\'s signature framework. Understand the hidden emotional blueprints behind your recurring patterns — and finally gain the power to rewrite them.'
+    text: 'Dr. Maria\'s signature framework. Understand the hidden emotional blueprints behind your recurring patterns - and finally gain the power to rewrite them.'
   },
   {
     title: 'A Stronger Organization',
     sub: 'Training & Consulting',
-    text: 'Mental health awareness, leadership development, conflict resolution and employee wellness — building healthier teams, schools, churches and communities.'
+    text: 'Mental health awareness, leadership development, conflict resolution and employee wellness - building healthier teams, schools, churches and communities.'
   }
 ];
 
@@ -124,7 +126,7 @@ export default function Home() {
   useMeta({
     title: 'Healing Minds. Strengthening Relationships. Transforming Lives.',
     description:
-      'Are you feeling stuck, overwhelmed or carrying pain alone? Aome Consults offers therapy, coaching and Schema Intelligence™ with Barr. Dr. Maria Esele Abraham — helping you heal, grow and transform.',
+      'Are you feeling stuck, overwhelmed or carrying pain alone? Aome Consults offers therapy, coaching and Schema Intelligence™ with Barr. Dr. Maria Esele Abraham - helping you heal, grow and transform.',
     path: '/'
   });
 
@@ -146,13 +148,13 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-ink-600 max-w-md mb-4 text-lg leading-relaxed">
-              Whatever you are carrying right now — grief, broken relationships, emotional pain,
-              recurring patterns or the quiet exhaustion of losing yourself — you deserve
+              Whatever you are carrying right now -  broken relationships, emotional pain,
+              recurring patterns, the quiet exhaustion of losing yourself or grief - you deserve
               real support and lasting change.
             </p>
             <p className="text-ink-600 max-w-md mb-8">
               At Aome Consults, Barr. Dr. Maria Esele Abraham walks with you through the
-              journey — with compassion, clinical expertise and over 30 years of experience
+              journey - with compassion, clinical expertise and over 30 years of experience
               helping people truly transform.
             </p>
             <div className="flex flex-wrap gap-4 mb-7">
@@ -167,13 +169,13 @@ export default function Home() {
           <div className="relative rounded-brand overflow-hidden shadow-2xl">
             <img
               src={drMaria}
-              alt="Barr. Dr. Maria Esele Abraham — Counselling Psychologist and Founder of Aome Consults"
+              alt="Barr. Dr. Maria Esele Abraham - Counselling Psychologist and Founder of Aome Consults"
               className="w-full h-full object-cover aspect-[4/5]"
             />
             {/* Name badge over the image */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-teal-900/90 to-transparent px-6 py-5">
               <p className="text-cream-50 font-display text-lg leading-tight">Barr. Dr. Maria Esele Abraham</p>
-              <p className="text-gold-300 text-sm">Counselling Psychologist &middot; Schema Intelligence Specialist</p>
+              <p className="text-cream-50 text-sm">Counselling Psychologist &middot; Schema Intelligence Specialist</p>
             </div>
           </div>
         </div>
@@ -197,14 +199,14 @@ export default function Home() {
           ))}
         </div>
         <p className="text-center text-teal-700 font-display italic text-lg mt-8">
-          If any of this resonates — you are in the right place.
+          If any of this resonates - you are in the right place.
         </p>
       </section>
 
       {/* ── WHAT YOU WILL GAIN ── outcome focused */}
       <section className="px-5 py-16">
         <SectionDivider />
-        <p className="eyebrow text-center">What working with Maria looks like for you</p>
+        <p className="eyebrow text-center">What working with Dr. Maria looks like for you</p>
         <h2 className="section-title">Real support. Real change. Results that last.</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {outcomes.map((o) => (
@@ -222,7 +224,7 @@ export default function Home() {
       {/* ── SERVICES ── framed as what the client receives */}
       <section className="bg-cream-50 px-5 py-16">
         <SectionDivider />
-        <p className="eyebrow text-center">How Maria Can Help</p>
+        <p className="eyebrow text-center">How Dr. Maria Can Help</p>
         <h2 className="section-title">Support for every season of your journey</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-5 mb-10">
           {services.map((s) => (
@@ -257,20 +259,20 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal>
-            <p className="eyebrow">Why trust Maria with your journey</p>
+            <p className="eyebrow">Why trust Dr. Maria with your journey</p>
             <h2 className="text-2xl md:text-3xl mb-4">
               30+ years of walking people back to themselves
             </h2>
             <p className="text-ink-600 mb-4">
               Barr. Dr. Maria Esele Abraham, PhD is a Counselling Psychologist,
               Psychotherapist and Schema Intelligence Specialist with over three decades
-              of experience. Her approach combines clinical depth with genuine human warmth —
+              of experience. Her approach combines clinical depth with genuine human warmth -
               meeting you exactly where you are.
             </p>
             <p className="text-ink-600 mb-6">
               She is the founder of <strong>Aome Consults</strong> and{' '}
               <strong>Reflections with Maria</strong>, and creator of the{' '}
-              <strong>Schema Intelligence™</strong> framework — a powerful lens for
+              <strong>Schema Intelligence™</strong> framework - a powerful lens for
               understanding the hidden patterns shaping your life.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -314,7 +316,7 @@ export default function Home() {
           <p className="eyebrow text-center">Books &amp; Resources</p>
           <h2 className="section-title">Continue the journey between sessions</h2>
           <p className="text-ink-600 mb-8 max-w-xl mx-auto">
-            Dr. Maria's books are written for people who want to go deeper —
+            Dr. Maria's books are written for people who want to go deeper -
             practical, insightful reads on personality, beliefs, relationships and
             the psychology of lasting change.
           </p>
@@ -335,7 +337,7 @@ export default function Home() {
           <LeafIcon className="w-12 h-14" />
         </div>
         <h2 className="font-display text-3xl md:text-4xl text-white mb-4 max-w-2xl mx-auto">
-          You deserve to heal, grow and thrive — not just survive.
+          You deserve to heal, grow and thrive - not just survive.
         </h2>
         <p className="max-w-lg mx-auto text-teal-100 mb-4 text-lg">
           Take the first step today. Book a consultation and begin the journey

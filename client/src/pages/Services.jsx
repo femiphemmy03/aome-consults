@@ -5,7 +5,7 @@ import useMeta from '../hooks/useMeta.js';
 
 const pillars = [
   {
-    number: '01',
+    number: '02',
     title: 'Therapy & Counselling',
     intro: 'Professional support for emotional, psychological and relational wellbeing.',
     items: [
@@ -17,7 +17,7 @@ const pillars = [
     ]
   },
   {
-    number: '02',
+    number: '03',
     title: 'Coaching & Personal Development',
     intro: 'Helping individuals move from where they are to where they want to be.',
     items: [
@@ -90,16 +90,16 @@ export default function Services() {
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-4 text-gold-300">
             <LeafIcon className="w-9 h-10" />
-            <p className="eyebrow text-gold-300 mb-0">Pillar 03 &middot; Our Signature Framework</p>
+            <p className="eyebrow text-gold-300 mb-0">Pillar 01 &middot; Our Signature Framework</p>
           </div>
           <h2 className="font-display text-3xl md:text-4xl text-white mb-4">
-            Schema Intelligence™ — Understanding the Patterns Behind the Pain
+            Schema Intelligence™ - Understanding the Patterns Behind the Pain
           </h2>
           <p className="text-teal-100 mb-4 max-w-2xl">
             Many people struggle with recurring challenges in relationships, self-worth,
             decision-making and emotional wellbeing without understanding why those patterns
             continue to repeat. Schemas are deeply rooted beliefs, assumptions and emotional
-            patterns formed through life experience &mdash; and Schema Intelligence helps you
+            patterns formed through life experience - and Schema Intelligence helps you
             uncover the hidden emotional blueprints shaping your life.
           </p>
           <p className="font-display italic text-gold-300 text-lg mb-8">

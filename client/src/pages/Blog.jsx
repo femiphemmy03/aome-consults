@@ -11,7 +11,7 @@ export default function Blog() {
   useMeta({
     title: 'Journal',
     description:
-      'Reflections with Maria — articles on grief, relationships, mental health, and personal transformation from Barr. Dr. Maria Esele Abraham.',
+      'Reflections with Maria - articles on grief, relationships, mental health, and personal transformation from Barr. Dr. Maria Esele Abraham.',
     path: '/blog'
   });
 
@@ -31,7 +31,7 @@ export default function Blog() {
 
       {loading && <p className="text-center text-ink-400">Loading posts...</p>}
       {!loading && posts.length === 0 && (
-        <p className="text-center text-ink-400">No posts published yet — check back soon.</p>
+        <p className="text-center text-ink-400">No posts published yet - check back soon.</p>
       )}
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">

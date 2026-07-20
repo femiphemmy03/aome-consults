@@ -39,10 +39,10 @@ export default function Footer() {
         <div className="text-sm">
           <p className="text-xs font-bold text-gold-300 uppercase tracking-widest mb-2">Get in Touch</p>
           <a
-            href="mailto:aomeconsults.contacts@gmail.com"
+            href="mailto:aomeconsults@gmail.com"
             className="block font-semibold mb-1 hover:text-gold-300 transition-colors"
           >
-            aomeconsults.contacts@gmail.com
+            aomeconsults@gmail.com
           </a>
           <p className="text-teal-100 mb-4">aomeconsults.com</p>
 
@@ -74,7 +74,7 @@ export default function Footer() {
         <p className="mt-1">
           <Link to="/privacy" className="underline hover:text-gold-300 transition-colors">Privacy Policy</Link>
           {' '}&middot;{' '}
-          <a href="mailto:aomeconsults.contacts@gmail.com" className="underline hover:text-gold-300 transition-colors">
+          <a href="mailto:aomeconsults@gmail.com" className="underline hover:text-gold-300 transition-colors">
             Contact Us
           </a>
         </p>

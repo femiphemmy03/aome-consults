@@ -93,7 +93,7 @@ export default function Book() {
         name: lead.name
       },
       customizations: {
-        title: 'Aome Consults — Consultation',
+        title: 'Aome Consults - Consultation',
         description: 'Booking fee for a consultation with Dr. Maria Esele Abraham',
         logo: ''
       },
@@ -162,7 +162,7 @@ export default function Book() {
             onChange={(e) => setLead({ ...lead, phone: e.target.value })}
           />
           <input
-            placeholder="Country"
+            placeholder="Location e.g Lagos, Nigeria"
             className="input-field"
             value={lead.country}
             onChange={(e) => setLead({ ...lead, country: e.target.value })}
