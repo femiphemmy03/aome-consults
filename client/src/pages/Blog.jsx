@@ -25,8 +25,8 @@ export default function Blog() {
   return (
     <main className="px-5 py-14 max-w-6xl mx-auto">
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <p className="eyebrow eyebrow-gold text-center">From the Journal</p>
-        <h1 className="font-display text-3xl md:text-5xl">Reflections with Maria</h1>
+        <p className="eyebrow eyebrow-gold text-center">From our Journals</p>
+        <h1 className="font-display text-3xl md:text-5xl"></h1>
       </div>
 
       {loading && <p className="text-center text-ink-400">Loading posts...</p>}

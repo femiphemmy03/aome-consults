@@ -1,7 +1,7 @@
 import useMeta from '../hooks/useMeta.js';
 
 const LAST_UPDATED = 'July 2026';
-const EMAIL = 'aomeconsults.contacts@gmail.com';
+const EMAIL = 'aomeconsults@gmail.com';
 
 function Section({ title, children }) {
   return (

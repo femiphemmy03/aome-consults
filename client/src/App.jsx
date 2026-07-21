@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import WhatsAppWidget from './components/WhatsAppWidget.jsx';
 import StickyCTA from './components/StickyCTA.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 import Home from './pages/Home.jsx';
 import Services from './pages/Services.jsx';
@@ -32,24 +33,29 @@ function PublicLayout() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route element={<PublicLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/book" element={<Book />} />
-        <Route path="/privacy" element={<Privacy />} />
-        {/* /schedule is intentionally unlisted — never linked from nav or buttons,
-            only reachable via the link emailed after payment. */}
-        <Route path="/schedule" element={<Schedule />} />
-        <Route path="/survey/:bookingId" element={<Survey />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
+    <>
+      {/* ScrollToTop must be inside BrowserRouter (provided by main.jsx)
+          but outside Routes so it catches every navigation */}
+      <ScrollToTop />
 
-      {/* Admin has its own chrome — no public navbar/footer/widgets */}
-      <Route path="/admin/*" element={<AdminApp />} />
-    </Routes>
+      <Routes>
+        <Route element={<PublicLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/book" element={<Book />} />
+          <Route path="/privacy" element={<Privacy />} />
+          {/* /schedule is intentionally unlisted — only reachable via emailed link */}
+          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/survey/:bookingId" element={<Survey />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
+        {/* Admin has its own chrome — no public navbar/footer/widgets */}
+        <Route path="/admin/*" element={<AdminApp />} />
+      </Routes>
+    </>
   );
 }

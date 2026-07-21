@@ -78,12 +78,12 @@ const testimonials = [
   {
     quote: 'Whenever Maria teaches, I start asking myself - what is the inner map behind this behaviour? I no longer judge people so quickly because I now understand that behaviour usually has a story.',
     name: 'A. Adedayo',
-    service: 'Schema Intelligence'
+    service: 'Schema Intelligence therapy'
   },
   {
     quote: 'I stopped asking "What is wrong with me?" and started asking "What shaped me?" That single shift changed everything.',
     name: 'J. Ezimah',
-    service: 'Schema Intelligence'
+    service: 'Schema Intelligence therapy'
   }
 ];
 
@@ -102,7 +102,7 @@ const services = [
   {
     title: 'A Map of Yourself',
     sub: 'Schema Intelligence™',
-    text: 'Dr. Maria\'s signature framework. Understand the hidden emotional blueprints behind your recurring patterns - and finally gain the power to rewrite them.'
+    text: 'Our signature framework. Understand the hidden emotional blueprints behind your recurring patterns - and finally gain the power to rewrite them.'
   },
   {
     title: 'A Stronger Organization',
@@ -126,7 +126,7 @@ export default function Home() {
   useMeta({
     title: 'Healing Minds. Strengthening Relationships. Transforming Lives.',
     description:
-      'Are you feeling stuck, overwhelmed or carrying pain alone? Aome Consults offers therapy, coaching and Schema Intelligence™ with Barr. Dr. Maria Esele Abraham - helping you heal, grow and transform.',
+      'Are you feeling stuck, overwhelmed or carrying pain alone? Aome Consults offers therapy, coaching and Schema Intelligence™ with Barr. - helping you heal, grow and transform.',
     path: '/'
   });
 
@@ -153,7 +153,7 @@ export default function Home() {
               real support and lasting change.
             </p>
             <p className="text-ink-600 max-w-md mb-8">
-              At Aome Consults, Barr. Dr. Maria Esele Abraham walks with you through the
+              At Aome Consults,  We walk with you through the
               journey - with compassion, clinical expertise and over 30 years of experience
               helping people truly transform.
             </p>
@@ -186,7 +186,7 @@ export default function Home() {
         <SectionDivider />
         <div className="max-w-4xl mx-auto text-center mb-10">
           <p className="eyebrow eyebrow-gold text-center">You are not alone</p>
-          <h2 className="section-title">Many people come to Aome Consults feeling&hellip;</h2>
+          <h2 className="section-title">Many people come to Aome Consults &hellip;</h2>
         </div>
         <div className="max-w-4xl mx-auto grid sm:grid-cols-2 gap-4">
           {painPoints.map((p) => (
@@ -206,7 +206,7 @@ export default function Home() {
       {/* ── WHAT YOU WILL GAIN ── outcome focused */}
       <section className="px-5 py-16">
         <SectionDivider />
-        <p className="eyebrow text-center">What working with Dr. Maria looks like for you</p>
+        <p className="eyebrow text-center">What working with us looks like for you</p>
         <h2 className="section-title">Real support. Real change. Results that last.</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           {outcomes.map((o) => (
@@ -224,7 +224,7 @@ export default function Home() {
       {/* ── SERVICES ── framed as what the client receives */}
       <section className="bg-cream-50 px-5 py-16">
         <SectionDivider />
-        <p className="eyebrow text-center">How Dr. Maria Can Help</p>
+        <p className="eyebrow text-center">How we Can Help</p>
         <h2 className="section-title">Support for every season of your journey</h2>
         <div className="max-w-6xl mx-auto grid sm:grid-cols-2 gap-5 mb-10">
           {services.map((s) => (
@@ -259,12 +259,12 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal>
-            <p className="eyebrow">Why trust Dr. Maria with your journey</p>
+            <p className="eyebrow">Why trust us with your journey</p>
             <h2 className="text-2xl md:text-3xl mb-4">
               30+ years of walking people back to themselves
             </h2>
             <p className="text-ink-600 mb-4">
-              Barr. Dr. Maria Esele Abraham, PhD is a Counselling Psychologist,
+              Our lead Psychologist Dr. Maria Esele Abraham, PhD is a Counselling Psychologist,
               Psychotherapist and Schema Intelligence Specialist with over three decades
               of experience. Her approach combines clinical depth with genuine human warmth -
               meeting you exactly where you are.
