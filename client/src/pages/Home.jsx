@@ -169,12 +169,12 @@ export default function Home() {
           <div className="relative rounded-brand overflow-hidden shadow-2xl">
             <img
               src={drMaria}
-              alt="Barr. Dr. Maria Esele Abraham - Counselling Psychologist and Founder of Aome Consults"
+              alt="Dr. Maria Esele Abraham - Counselling Psychologist and Founder of Aome Consults"
               className="w-full h-full object-cover aspect-[4/5]"
             />
             {/* Name badge over the image */}
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-teal-900/90 to-transparent px-6 py-5">
-              <p className="text-cream-50 font-display text-lg leading-tight">Barr. Dr. Maria Esele Abraham</p>
+              <p className="text-cream-50 font-display text-lg leading-tight">Dr. Maria Esele Abraham</p>
               <p className="text-cream-50 text-sm">Counselling Psychologist &middot; Schema Intelligence Specialist</p>
             </div>
           </div>
@@ -254,7 +254,7 @@ export default function Home() {
                 why they do it. That understanding is where your transformation begins.
               </blockquote>
               <p className="text-gold-300 font-semibold text-sm">
-                &mdash; Barr. Dr. Maria Esele Abraham, PhD
+                &mdash; Dr. Maria Esele Abraham, PhD
               </p>
             </div>
           </Reveal>

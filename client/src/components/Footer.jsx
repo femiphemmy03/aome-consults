@@ -23,7 +23,7 @@ export default function Footer() {
           </p>
           <p className="text-xs text-teal-100/70 leading-relaxed">
             Professional psychological services, coaching and Schema Intelligence™
-            with Barr. Dr. Maria Esele Abraham.
+            with Dr. Maria Esele Abraham.
           </p>
         </div>
 
